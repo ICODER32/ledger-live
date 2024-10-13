@@ -1,11 +1,13 @@
-import { FaA, FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   return (
-    <div className="bg-[#0a0a0a] p-10 h-[100vh] gap-7 flex">
-      <div className=" w-[28%] flex flex-col justify-between">
-        <div className="flex flex-col justify-between`gap-3">
+    <div className="bg-[#131415]  h-[100vh] gap-7 flex">
+      <div className=" w-[28%] flex p-5 flex-col justify-between">
+        <div className="flex flex-col justify-between gap-10">
           <img className="text-white w-[200px]" src="/logo.png" alt="abc" />
-          <h1 className="text-white text-6xl font-light main_heading">
+          <h1 className="text-white text-6xl font-[300]  main_heading">
             THE MOST SECURE <br /> CRYPTO CURRENCY <br /> & NFT WALLET
           </h1>
           <p className=" mt-4 text-[20px] text-white">
@@ -13,7 +15,12 @@ export default function Home() {
           </p>
         </div>
         <div className=" flex flex-col gap-3 ">
-          <button className="w=[600px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black">
+          <button
+            onClick={() => {
+              navigate("/ledger");
+            }}
+            className="w=[600px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black"
+          >
             <span>Get Started</span> <FaArrowRight />
           </button>
           <button className="text-white font-semibold rounded-full text-[18px] p-2 border border-white">
@@ -32,7 +39,9 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="bg-pink-400 ">h</div>
+      <div className="h-[100vh] ">
+        <img src="/main.png" className="w-full h-full" alt="" />
+      </div>
     </div>
   );
 }
