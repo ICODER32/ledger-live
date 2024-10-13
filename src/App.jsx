@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Ledger from "./pages/Ledger";
 import Device from "./pages/Device";
 import Recovery from "./pages/Recovery";
+import RecoveryPhrase from "./pages/RecoveryPhrase";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/ledger" element={<Ledger />} />
           <Route path="/device" element={<Device />} />
           <Route path="/recovery" element={<Recovery />} />
+          <Route path="/recoveryphrase" element={<RecoveryPhrase />} />
         </Routes>
       </Router>
     </div>

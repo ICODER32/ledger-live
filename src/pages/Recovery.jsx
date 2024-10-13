@@ -2,6 +2,8 @@ import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
@@ -63,6 +65,8 @@ const IOSSwitch = styled((props) => (
 }));
 
 export default function Recovery() {
+  const navigate = useNavigate();
+  const [isDisabled, setIsDisabled] = useState(true);
   return (
     <div className=" h-[100vh] flex bg-[#131415]">
       <img src="/recoverypic.png" className=" h-full" alt="" />
@@ -81,7 +85,8 @@ export default function Recovery() {
 
           <div className="  border-[0.5px]  rounded-lg flex items-center  border-white  px-7 mt-16">
             <FormControlLabel
-              control={<IOSSwitch sx={{ m: 3 }} defaultChecked />}
+              control={<IOSSwitch sx={{ m: 3 }} />}
+              onChange={(e) => setIsDisabled(!isDisabled)}
             />
             <p
               className="
@@ -120,6 +125,7 @@ export default function Recovery() {
             border-white
             mt-9
             "
+              onClick={() => navigate("/device")}
             >
               <span>
                 <FaArrowLeft />
@@ -143,7 +149,8 @@ export default function Recovery() {
             disabled:opacity-10
 
             "
-              disabled
+              onClick={() => navigate("/recoveryphrase")}
+              disabled={isDisabled}
             >
               Enter Recovery Phrase
               <span>
