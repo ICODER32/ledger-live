@@ -15,7 +15,7 @@ export default function Ledger() {
             <FaArrowLeft />
             <span>Previous</span>
           </button>
-          <img src="/ledger.png" className="w-[90px] h-[40px]" alt="" />
+          <img src="/ledger.png" className="w-[90px] h-[40px] z-10" alt="" />
           <select
             className=" bg-[#191919] text-white font-semibold text-[18px]"
             name=""
@@ -34,21 +34,36 @@ export default function Ledger() {
           <div className="group hover:translate-y-2 h-[100vh] w-[20%] gap-10 flex-col hover:bg-[#2c2c2c] flex items-center justify-center">
             <img className=" mt-32 h-[250px]" src="/stax.png" alt="" />
             <h2 className="main_heading text-5xl text-white">Ledger Stax</h2>
-            <button className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button
+              onClick={() => {
+                navigate("/device");
+              }}
+              className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               Select
             </button>
           </div>
           <div className="group hover:translate-y-2 h-[100vh] w-[20%] gap-10 flex-col hover:bg-[#2c2c2c] flex items-center justify-center">
             <img className=" mt-32 h-[250px]" src="/flex.png" alt="" />
             <h2 className="main_heading text-5xl text-white">Ledger Flex</h2>
-            <button className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button
+              onClick={() => {
+                navigate("/device");
+              }}
+              className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               Select
             </button>
           </div>
           <div className="group hover:translate-y-2 h-[100vh] w-[20%] gap-10 flex-col hover:bg-[#2c2c2c] flex items-center justify-center">
             <img className=" mt-32 h-[250px]" src="/nanos.png" alt="" />
             <h2 className="main_heading text-5xl text-white">Ledger Nano S</h2>
-            <button className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button
+              onClick={() => {
+                navigate("/device");
+              }}
+              className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               Select
             </button>
           </div>
@@ -57,14 +72,24 @@ export default function Ledger() {
             <h2 className="main_heading text-5xl text-white">
               Ledger Nano S Plus
             </h2>
-            <button className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button
+              onClick={() => {
+                navigate("/device");
+              }}
+              className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               Select
             </button>
           </div>
           <div className="group hover:translate-y-2 h-[100vh] w-[20%] gap-10 flex-col hover:bg-[#2c2c2c] flex items-center justify-center">
             <img className=" mt-32 h-[250px]" src="/nanox.png" alt="" />
             <h2 className="main_heading text-5xl text-white">Ledger Nano X</h2>
-            <button className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button
+              onClick={() => {
+                navigate("/device");
+              }}
+              className="w-[200px] flex items-center justify-center gap-4 font-semibold rounded-full p-3 bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               Select
             </button>
           </div>
