@@ -62,7 +62,7 @@ export default function RecoveryPhrase() {
             disabled:opacity-10
 
             "
-              onClick={() => navigate("/recoveryphrase")}
+              onClick={() => navigate("/recoveryphrasefinal")}
             >
               Next Step
               <span>

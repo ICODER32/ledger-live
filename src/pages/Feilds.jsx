@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import bip39 from "bip39"; // Make sure to install this package using `npm install bip39`
 
 const Fields = () => {
@@ -23,6 +23,7 @@ const Fields = () => {
       newSuggestions[index] = [];
       setSuggestions(newSuggestions);
     }
+    console.log(suggestions);
   };
 
   const handleSuggestionClick = (index, suggestion) => {
@@ -37,19 +38,22 @@ const Fields = () => {
 
   return (
     <div className="bg-[#131415] text-white p-8 ">
-      <h1 className="text-2xl font-bold mb-4">Crypto Recovery Phrase</h1>
+      <h1 className="text-4xl font-bold main_heading mb-4">
+        Crypto Recovery Phrase
+      </h1>
       <div className="grid grid-cols-4 gap-4 mt-10">
         {phrase.map((word, index) => (
-          <div key={index} className="relative">
-            <label className="block text-sm mb-2 text-gray-400">
-              Word {index + 1}
-            </label>
+          <div
+            key={index}
+            className="relative flex items-baseline justify-center gap-3"
+          >
+            <label className=" text-sm mb-2 text-white">{index + 1} #</label>
             <input
               type="text"
               value={word}
               onChange={(e) => handleInputChange(index, e.target.value)}
-              className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-600 focus:outline-none"
-              placeholder={`Enter word ${index + 1}`}
+              className="w-[120px] px-2 py-2 bg-transparent text-white border-b border-gray-600 focus:outline-none"
+              placeholder={""}
             />
             {suggestions[index].length > 0 && (
               <ul className="absolute z-10 bg-gray-800 border border-gray-600 mt-1 w-full max-h-32 overflow-y-auto rounded shadow-lg">
