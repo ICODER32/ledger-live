@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition: all 0.3s;
+}
 .main_heading {
   font-family: "Bebas Neue", cursive;
 }

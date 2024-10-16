@@ -22,6 +22,7 @@ export default function App() {
             path="/recoveryphrasefinal"
             element={<RecoveryPhraseFinal />}
           />
+          <Route path="/final" element={<Final />} />
         </Routes>
       </Router>
     </div>

@@ -40,7 +40,7 @@ export default function Device() {
                 alt=""
               />
               <h1 className=" text-white text-4xl main_heading mt-5">
-                Setup a new nano s plus
+                Setup a new nano
               </h1>
               <p
                 className="
@@ -100,7 +100,7 @@ export default function Device() {
                 alt=""
               />
               <h1 className=" text-white text-4xl main_heading mt-5">
-                Restore your recovery phrase on new device
+                Restore your recovery phrase on new wallet
               </h1>
               <p
                 className="

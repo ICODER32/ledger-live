@@ -72,18 +72,22 @@ export default function Recovery() {
       <img src="/recoverypic.png" className=" h-full" alt="" />
       <div className=" w-full h-full flex items-start justify-center">
         <div className=" flex items-start justify-center flex-col w-[80%] h-[100%]">
-          <img src="/recoveryprogress.png" className="w-[80%] mb-9" alt="" />
-          <h1 className="text-white w-full text-4xl">
+          <img
+            src="/recoveryprogress.png"
+            className="w-[80%] mt-[0px]"
+            alt=""
+          />
+          <h1 className="text-white w-full mt-8 text-[30px]">
             ENTER YOUR RECOVERY PHRASE
           </h1>
 
-          <p className=" text-[#ffffffaa] mt-12 text-[19px]">
+          <p className=" text-[#ffffffaa] mt-8 text-[18px]">
             Your recovery phrase is the secret list of words that you backed up
             when you first set up <br /> you wallet . <br />
-            Ledger doesnot keep a copy of your recovery phrase. <br />
+            Ledger does not keep a copy of your recovery phrase. <br />
           </p>
 
-          <div className="  border-[0.5px]  rounded-lg flex items-center  border-white  px-7 mt-16">
+          <div className="  border-[0.5px]    rounded-lg flex items-center  border-white  px-7 mt-16">
             <FormControlLabel
               control={<IOSSwitch sx={{ m: 3 }} />}
               onChange={(e) => setIsDisabled(!isDisabled)}
@@ -91,7 +95,7 @@ export default function Recovery() {
             <p
               className="
             text-white
-            text-[20px]
+            text-[18px]
             "
             >
               I understand if I lose my recovery phrase, I won&apos;t be able to
@@ -106,7 +110,7 @@ export default function Recovery() {
           justify-between
           gap-4
           w-[80%]
-          mt-24
+          mt-28
 
           "
           >

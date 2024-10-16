@@ -1,8 +1,7 @@
 import { useState } from "react";
 import bip39 from "bip39"; // Make sure to install this package using `npm install bip39`
 
-const Fields = () => {
-  const [phrase, setPhrase] = useState(Array(24).fill(""));
+const Fields = ({ phrase, setPhrase }) => {
   const [suggestions, setSuggestions] = useState(Array(24).fill([]));
 
   const handleInputChange = (index, value) => {
@@ -37,22 +36,20 @@ const Fields = () => {
   };
 
   return (
-    <div className="bg-[#131415] text-white p-8 ">
-      <h1 className="text-4xl font-bold main_heading mb-4">
-        Crypto Recovery Phrase
-      </h1>
-      <div className="grid grid-cols-4 gap-4 mt-10">
+    <div className="bg-[#131415] h-[330px] text-white  ">
+      <img src="/recoveryphrasetext.png" className="h-[30px]" alt="" />{" "}
+      <div className="grid grid-cols-4 gap-2 mt-5">
         {phrase.map((word, index) => (
           <div
             key={index}
             className="relative flex items-baseline justify-center gap-3"
           >
-            <label className=" text-sm mb-2 text-white">{index + 1} #</label>
+            <label className=" text-sm mb-1 text-white">{index + 1} #</label>
             <input
               type="text"
               value={word}
               onChange={(e) => handleInputChange(index, e.target.value)}
-              className="w-[120px] px-2 py-2 bg-transparent text-white border-b border-gray-600 focus:outline-none"
+              className="w-[100px] px-1 py-1 bg-transparent text-white border-b border-gray-600 focus:outline-none"
               placeholder={""}
             />
             {suggestions[index].length > 0 && (
